@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react"
+import Expense from "./Expense"
 
 describe("<Expense />", ()=>{
   test("expense should render it's amount and description", ()=>{
