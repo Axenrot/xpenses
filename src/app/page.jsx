@@ -1,7 +1,7 @@
 import AddNewExpense from "./components/Expenses/AddNewExpense";
 import Expenses from "./components/Expenses/Expenses";
 
-export default function Home({ titleBlock, mainBlock, secondaryBlock }) {
+export default function Home() {
   let expensesListExample = [
     {
       amount: -12,
@@ -38,7 +38,7 @@ export default function Home({ titleBlock, mainBlock, secondaryBlock }) {
   return (
     <main className="grid items-start h-full grid-cols-4 gap-6 font-bold text-black grid-rows-8 md:grid-rows-4 lg:grid-rows-1 md:grid-cols-6 lg:grid-cols-8">
       <div className="flex flex-row h-full row-span-1 bg-gray-200 lg:row-span-1 lg:flex-col col-span-full lg:col-span-2 xl:col-span-1">
-        {titleBlock ? titleBlock : "Block 1"}
+        Block 1
       </div>
       <div className="self-start h-full row-span-4 bg-gray-200 lg:row-span-1 col-span-full md:col-span-4 lg:col-span-3 xl:col-span-4">
         <Expenses expensesList={expensesListExample} currency="brl" />
