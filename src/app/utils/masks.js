@@ -6,3 +6,33 @@ export function maskDate(date) {
   }
   return "???";
 }
+
+export const onlyNumbers = (text) => {
+  if (text) {
+    return text.split("").filter((letter) => letter.match(/\d/));
+  } else {
+    return "";
+  }
+};
+
+export const maskNumber = (text) => {
+  if (!text) {
+    return "";
+  }
+
+  return onlyNumbers(text).join("");
+};
+
+export const maskReal = (str) => {
+  var int = maskNumber(str) * 1;
+  int = (int / 100).toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  });
+
+  return int;
+};
+
+export const maskRealReverse = (str) => {
+  return parseFloat(maskNumber(str)) / 100;
+};
