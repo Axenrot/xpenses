@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function Post(req, res) {
+export async function POST(req, res) {
   try {
     // You can access the request body using req.body
     const expenseData = req.body;
